@@ -1,0 +1,315 @@
+/* GLOBAL SETUP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(245,255,229);
+    color: black;
+    overflow-x: hidden;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h2 {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+/* FONTS */
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* HOME: navbar + header */ 
+#HOME {
+    width: 100vw;
+}    
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 1px 0 20px 40px;
+    background-color:rgb(114, 28, 29);
+}
+
+#navbar ul {
+    margin-top: 2%;
+    list-style: none;
+    display: flex;             
+    justify-content: flex-start;  
+    gap: 30px;                
+}
+
+#navbar a {
+    color: rgb(245,255,229);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+header {
+    width: 100vw;
+    height: 50vh;              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(245,255,229);
+    background-color: rgb(114, 28, 29);
+    overflow: hidden;         
+}
+
+h1 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 15vw;
+    letter-spacing: 2px;
+    line-height: 1;
+    transform: scaleY(1.4);
+    width: 100%;
+}
+
+/* IMAGE CHAIN */
+#IMAGECHAIN {
+    background-image: url(images/photo1.jpg);
+    background-size: contain;
+    background-position: center;
+    min-height: 45vh; 
+     display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DESCRIPTION: text + image */
+#DESCRIPTION {
+    display: flex;
+    gap: 5%;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#DESCRIPTION > div {
+    width: 45%;
+}
+
+.description-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 79vh;
+}
+
+.description-text {
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+h4 {
+    font-size: 3vw;
+    color:rgb(1, 95, 47);
+}
+
+p {
+    font-size: 1.3vw;
+    text-align: justify;
+}
+/* IMAGECHAIN2 */
+#IMAGECHAIN2 {
+    background-image: url(images/photo4.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+    min-height: 45vh; 
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+/* QUESTIONS */
+/* QUESTIONS */
+#QUESTIONS {
+    background-color: rgb(1,95,47);
+    color: rgb(245,255,229);
+    align-items: center;
+    padding: 5% 6%;   
+    scroll-margin-top: 70px;
+}
+
+.question1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 12vh;
+}
+
+.question1 > div {
+    flex: 1;
+}
+/* the text column gets a bit more room than the other two */
+.question1 > .question1-text {
+    flex: 1.3;
+}
+
+.question1-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 80vh;
+}
+
+#QUESTIONS h4 {
+    color: rgb(245,255,229);
+    font-size: clamp(28px, 3.2vw, 56px);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.question1-text p {
+    font-size: clamp(16px, 1.4vw, 22px);
+    line-height: 1.7;
+    text-align: left;
+}
+
+.question2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 12vh;
+}
+
+.question2 > div {
+    flex: 1;
+}
+/* the text column gets a bit more room than the other two */
+.question2 > .question2-text {
+    flex: 1.3;
+}
+
+.question2-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 80vh;
+}
+
+.question2-text p {
+    font-size: clamp(16px, 1.4vw, 22px);
+    line-height: 1.7;
+    text-align: left;
+}
+
+.question3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 0;
+}
+
+.question3 > div {
+    flex: 1;
+}
+/* the text column gets a bit more room than the other two */
+.question3 > .question3-text {
+    flex: 1.3;
+}
+
+.question3-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 80vh;
+}
+
+.question3-text p {
+    font-size: clamp(16px, 1.4vw, 22px);
+    line-height: 1.7;
+    text-align: left;
+}
+.credit {
+    padding: 5%;
+    background-color: rgb(1,95,47);
+    color: rgb(230,255,157);
+}
+
+.credit h5 {
+    font-size: 40px;
+}
+
+/* IMAGE CHAIN 3 */
+#IMAGECHAIN3 {
+    background-image: url(images/photo10.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+    min-height: 45vh;
+}
+/* Last minute chances to fix the spacing */
+.question1 > .question1-question,
+.question2 > .question2-question,
+.question3 > .question3-question {
+    flex: 0.8;
+}
+/* STYLES */
+
+#STYLES {
+    align-items: center;
+    padding: 5% 6%;   
+    scroll-margin-top: 70px;   
+}
+.grid {
+    display: flex;
+    z-index: 1000;
+    width: 100%;
+    padding: 1px 0 20px 40px;
+    overflow-x: auto;
+}
+.grid > div {
+    flex: 0 0 25%;
+}
+
+.grid-img {
+    width: 100%;
+    align-items: center;
+}
+
+.grid h5 {
+    margin-left: 10px;
+}
