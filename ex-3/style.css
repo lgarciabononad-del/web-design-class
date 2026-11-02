@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(images/sea.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; /* hides the bottom of the rings that goes below the screen */
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* -- Invisible rings -- */
+.ring1 {
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    margin-bottom: -300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ring2 {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ring3 {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- the light and the oyster --- */
+.light {
+    width: 500px;
+    height: 500px;
+    background-image: url(images/light.png);
+    background-size: contain;
+    position: absolute;     
+    opacity: 0.15;
+    transform: scale(0.8);
+    transition: all 0.6s;    
+    pointer-events: none;   
+}
+.oyster {
+    width: 320px;
+    height: 320px;
+    background-image: url(images/oyster.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;            
+    transition: all 0.6s;
+}
+
+/* -- cursor -- */
+.ring1:hover .light {
+    opacity: 0.4;
+    transform: scale(1);
+}
+.ring2:hover .light {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+.ring3:hover .light {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.instructions {
+    position: fixed;
+    top: 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* --window-- */
+@media screen and (max-width: 1000px) {
+    .oyster {
+        filter: brightness(0.7);
+    }
+    .light {
+        opacity: 0.08;
+    }
+    .ring1:hover .light {
+        opacity: 0.25;
+    }
+    .ring2:hover .light {
+        opacity: 0.45;
+    }
+    .ring3:hover .light {
+        opacity: 0.65;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .ring1 {
+        width: 600px;
+        height: 600px;
+        margin-bottom: -200px;
+    }
+    .ring2 {
+        width: 400px;
+        height: 400px;
+    }
+    .ring3 {
+        width: 220px;
+        height: 220px;
+    }
+    .oyster {
+        width: 220px;
+        height: 220px;
+        filter: brightness(0.4);
+    }
+    .light {
+        width: 350px;
+        height: 350px;
+        opacity: 0.04;
+    }
+    .ring1:hover .light {
+        opacity: 0.12;
+    }
+    .ring2:hover .light {
+        opacity: 0.22;
+    }
+    .ring3:hover .light {
+        opacity: 0.35;
+    }
+    .instructions {
+        color: gray;
+    }
+}
