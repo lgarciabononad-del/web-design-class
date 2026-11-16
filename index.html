@@ -1,48 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Ten Principles for Good Design</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 2</title>
+  <!-- Special Elite font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="circle">
-    <div class="center-text">
-        <h1>Ten Principles for Good Design</h1>
-        <p>by Dieter Rams</p>
+  <section class="verse1">
+    <div class="scroll-frame">
+      <img class="scroll-image" src="images/1.png" alt="Looking up between New York skyscrapers">
     </div>
-    <img class="p1" src="images/1.jpg" alt="Principle 1">
-    <img class="p2" src="images/2.jpg" alt="Principle 2">
-    <img class="p3" src="images/3.jpg" alt="Principle 3">
-    <img class="p4" src="images/4.jpg" alt="Principle 4">
-    <img class="p5" src="images/5.jpg" alt="Principle 5">
-    <img class="p6" src="images/6.jpg" alt="Principle 6">
-    <img class="p7" src="images/7.jpg" alt="Principle 7">
-    <img class="p8" src="images/8.jpg" alt="Principle 8">
-    <img class="p9" src="images/9.jpg" alt="Principle 9">
-    <img class="p10" src="images/10.jpg" alt="Principle 10">
-</div>
+  </section>
+  <section class="verse2-4">
+    <div class="paseo-bg"></div>
+    <img class="passport" src="images/2pasaporte.jpg" alt="Old passport page with a photo of a young man">
+    <div class="scroll-frame">
+      <div class="statue-window">
+        <div class="window-paper"></div>
+        <img class="statue" src="images/2statue.png" alt="Pen sketch of the Statue of Liberty">
+        <img class="serpent" src="images/3serpent.png" alt="Sea serpent and winged horse climbing the statue">
+      </div>
+    </div>
+  </section>
+  <section class="verse5-6">
+  </section>
+  <section class="verse7-8">
+    <div class="gray-tint"></div>
+    <div class="scroll-frame">
+      <img class="hair" src="images/lines.png" alt="Flowing lines rising like hair or smoke">
+    </div>
+  </section>
+  <section class="verse9-10">
+    <div class="scroll-frame">
+      <div class="boy" role="img" aria-label="Boy sitting on a park bench"></div>
+    </div>
+  </section>
+  <!-- River background: stays fixed once the river fills the screen -->
+  <div class="river-bg"></div>
+  <img class="butterfly" src="images/7fly.png" alt="Butterfly">
+  <section class="verse11">
+    <img class="skyline" src="images/8siluette.png" alt="Black silhouette of a city skyline">
+  </section>
+  <section class="verse12">
+    <div class="scroll-frame">
+      <div class="faces" role="img" aria-label="Drawing of two faces"></div>
+    </div>
+  </section>
+  <!-- =========================================================
+       POEM: "Vuelta de paseo" by Federico García Lorca
+       Each line stays fixed on the screen and fades in and out
+       as you scroll (see the POEM part of script.js).
+       data-section = which section the line belongs to
+       data-start   = how many screens into that section it starts appearing
+       data-end     = how many screens into that section it is gone
+       --x / --y    = where the line sits on the screen
+       ========================================================= -->
+  <div class="poem">
+    <p class="poem-line" data-section="verse1" data-start="1" data-end="2.9"
+       style="--x: 50%; --y: 42%;">Murdered by<br>the sky.</p>
 
-<div class="principles">
-    <h2>1. Good design is innovative</h2>
-    <p>The possibilities for innovation are not, by any means, exhausted. Technological development is always offering new opportunities for innovative design. But innovative design always develops in tandem with innovative technology, and can never be an end in itself.</p>
-    <h2>2. Good design makes a product useful </h2>
-    <p>A product is bought to be used. It has to satisfy certain criteria, not only functional, but also psychological and aesthetic. Good design emphasizes the usefulness of a product whilst disregarding anything that could possibly detract from it.</p>
-    <h2>3. Good design is aesthetic</h2>
-    <p>The aesthetic quality of a product is integral to its usefulness because products we use every day affect our person and our well-being. But only well-executed objects can be beautiful.</p>
-    <h2>4. Good design makes a product understandable</h2>
-    <p>It clarifies the product's structure. Better still, it can make the product talk. At best, it is self-explanatory.</p>
-    <h2>5. Good design is unobtrusive</h2>
-    <p>Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user's self-expression.</p>
-    <h2>6. Good design is honest</h2>
-    <p>It does not make a product more innovative, powerful or valuable than it really is. It does not attempt to manipulate the consumer with promises that cannot be kept.</p>
-    <h2>7. Good design is long-lasting</h2>
-    <p>It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years - even in today's throwaway society.</p>
-    <h2>8. Good design is thorough down to the last detail</h2>
-    <p>Nothing must be arbitrary or left to chance. Care and accuracy in the design process show respect towards the user.</p>
-    <h2>9. Good design is environmentally-friendly</h2>
-    <p>Design makes an important contribution to the preservation of the environment. It conserves resources and minimizes physical and visual pollution throughout the lifecycle of the product.</p>
-    <h2>10. Good design is as little design as possible</h2>
-    <p>Less, but better - because it concentrates on the essential aspects, and the products are not burdened with non-essentials.</p>
-</div>
+    <p class="poem-line" data-section="verse2-4" data-start="0.35" data-end="0.95"
+       style="--x: 74%; --y: 50%;">Among the forms<br>that move toward<br>the snake</p>
+    <p class="poem-line" data-section="verse2-4" data-start="1.45" data-end="2.0"
+       style="--x: 74%; --y: 50%;">and the forms<br>searching for crystal</p>
+
+    <p class="poem-line" data-section="verse7-8" data-start="0.3" data-end="1.75"
+       style="--x: 50%; --y: 28%;">I will let my hair grow.</p>
+
+    <p class="poem-line" data-section="verse9-10" data-start="1.2" data-end="2.45"
+       style="--x: 20%; --y: 45%;">With the<br>limbless<br>tree that<br>cannot sing</p>
+    <p class="poem-line" data-section="verse9-10" data-start="1.45" data-end="2.45"
+       style="--x: 80%; --y: 45%;">and the boy<br>with the<br>white egg<br>face.</p>
+    <p class="poem-line" data-section="verse9-10" data-start="2.45" data-end="3.05"
+       style="--x: 15%; --y: 45%;">With the<br>broken-<br>headed<br>animals</p>
+    <p class="poem-line" data-section="verse9-10" data-start="2.45" data-end="3.05"
+       style="--x: 85%; --y: 45%;">and the<br>ragged<br>water of<br>dry feet.</p>
+
+    <p class="poem-line light" data-section="verse11" data-start="-0.75" data-end="0.05"
+       style="--x: 50%; --y: 14%;"></p>
+
+    <p class="poem-line light" data-section="verse12" data-start="-0.55" data-end="0.3"
+       style="--x: 50%; --y: 42%;">With all that is tired, deaf-<br>mute, and a butterfly<br>drowned in an inkwell.</p>
+    <p class="poem-line light" data-section="verse12" data-start="0.6" data-end="1.4"
+       style="--x: 76%; --y: 45%;">Stumbling onto my<br>face, different<br>every day.</p>
+    <p class="poem-line light poem-last" data-section="verse12" data-start="1.4" data-end="99"
+       style="--x: 76%; --y: 50%;">Murdered by the<br>sky!</p>
+
+    <!-- Only shows while hovering over the faces (replaces the last line) -->
+    <p class="poem-line light poem-title" data-section="verse12" data-start="1.4" data-end="99"
+       style="--x: 76%; --y: 50%;">“Back From a<br>Walk”<br>By Federico García<br>Lorca &amp; Art by<br>Salvador Dalí</p>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
