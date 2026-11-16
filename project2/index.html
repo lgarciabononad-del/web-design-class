@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 2</title>
+  <!-- Special Elite font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="verse1">
+    <div class="scroll-frame">
+      <img class="scroll-image" src="images/1.png" alt="Looking up between New York skyscrapers">
+    </div>
+  </section>
+  <section class="verse2-4">
+    <div class="paseo-bg"></div>
+    <img class="passport" src="images/2pasaporte.jpg" alt="Old passport page with a photo of a young man">
+    <div class="scroll-frame">
+      <div class="statue-window">
+        <div class="window-paper"></div>
+        <img class="statue" src="images/2statue.png" alt="Pen sketch of the Statue of Liberty">
+        <img class="serpent" src="images/3serpent.png" alt="Sea serpent and winged horse climbing the statue">
+      </div>
+    </div>
+  </section>
+  <section class="verse5-6">
+  </section>
+  <section class="verse7-8">
+    <div class="gray-tint"></div>
+    <div class="scroll-frame">
+      <img class="hair" src="images/lines.png" alt="Flowing lines rising like hair or smoke">
+    </div>
+  </section>
+  <section class="verse9-10">
+    <div class="scroll-frame">
+      <div class="boy" role="img" aria-label="Boy sitting on a park bench"></div>
+    </div>
+  </section>
+  <!-- River background: stays fixed once the river fills the screen -->
+  <div class="river-bg"></div>
+  <img class="butterfly" src="images/7fly.png" alt="Butterfly">
+  <section class="verse11">
+    <img class="skyline" src="images/8siluette.png" alt="Black silhouette of a city skyline">
+  </section>
+  <section class="verse12">
+    <div class="scroll-frame">
+      <div class="faces" role="img" aria-label="Drawing of two faces"></div>
+    </div>
+  </section>
+  <!-- =========================================================
+       POEM: "Vuelta de paseo" by Federico García Lorca
+       Each line stays fixed on the screen and fades in and out
+       as you scroll (see the POEM part of script.js).
+       data-section = which section the line belongs to
+       data-start   = how many screens into that section it starts appearing
+       data-end     = how many screens into that section it is gone
+       --x / --y    = where the line sits on the screen
+       ========================================================= -->
+  <div class="poem">
+    <p class="poem-line" data-section="verse1" data-start="1" data-end="2.9"
+       style="--x: 50%; --y: 42%;">Murdered by<br>the sky.</p>
+
+    <p class="poem-line" data-section="verse2-4" data-start="0.35" data-end="0.95"
+       style="--x: 74%; --y: 50%;">Among the forms<br>that move toward<br>the snake</p>
+    <p class="poem-line" data-section="verse2-4" data-start="1.45" data-end="2.0"
+       style="--x: 74%; --y: 50%;">and the forms<br>searching for crystal</p>
+
+    <p class="poem-line" data-section="verse7-8" data-start="0.3" data-end="1.75"
+       style="--x: 50%; --y: 28%;">I will let my hair grow.</p>
+
+    <p class="poem-line" data-section="verse9-10" data-start="1.2" data-end="2.45"
+       style="--x: 20%; --y: 45%;">With the<br>limbless<br>tree that<br>cannot sing</p>
+    <p class="poem-line" data-section="verse9-10" data-start="1.45" data-end="2.45"
+       style="--x: 80%; --y: 45%;">and the boy<br>with the<br>white egg<br>face.</p>
+    <p class="poem-line" data-section="verse9-10" data-start="2.45" data-end="3.05"
+       style="--x: 15%; --y: 45%;">With the<br>broken-<br>headed<br>animals</p>
+    <p class="poem-line" data-section="verse9-10" data-start="2.45" data-end="3.05"
+       style="--x: 85%; --y: 45%;">and the<br>ragged<br>water of<br>dry feet.</p>
+
+    <p class="poem-line light" data-section="verse11" data-start="-0.75" data-end="0.05"
+       style="--x: 50%; --y: 14%;"></p>
+
+    <p class="poem-line light" data-section="verse12" data-start="-0.55" data-end="0.3"
+       style="--x: 50%; --y: 42%;">With all that is tired, deaf-<br>mute, and a butterfly<br>drowned in an inkwell.</p>
+    <p class="poem-line light" data-section="verse12" data-start="0.6" data-end="1.4"
+       style="--x: 76%; --y: 45%;">Stumbling onto my<br>face, different<br>every day.</p>
+    <p class="poem-line light poem-last" data-section="verse12" data-start="1.4" data-end="99"
+       style="--x: 76%; --y: 50%;">Murdered by the<br>sky!</p>
+
+    <!-- Only shows while hovering over the faces (replaces the last line) -->
+    <p class="poem-line light poem-title" data-section="verse12" data-start="1.4" data-end="99"
+       style="--x: 76%; --y: 50%;">“Back From a<br>Walk”<br>By Federico García<br>Lorca &amp; Art by<br>Salvador Dalí</p>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
